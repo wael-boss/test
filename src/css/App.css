@@ -1,0 +1,304 @@
+#errTab{
+    position: fixed;
+    width: 100vw;
+    bottom: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--white3);
+    border: 1px solid var(--black5);
+    transition: all .3s ease-in-out;
+    padding: 5px 0;
+    z-index: 99;
+    text-align: center;
+}
+#signingPage{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("backGround.svg");
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+#signingPage #mainBox{
+    width: 60%;
+    height: 100%;
+    border-radius: 0 50px 50px 0;
+    background-image: linear-gradient(90deg ,#e6e6e6 ,hsl(0, 0%, 90% ,.6));
+    backdrop-filter: blur(2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#mainBox form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.passwordContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.passwordContainer div{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.passwordContainer div svg{
+    font-size: var(--fontSize-B);
+}
+.passwordContainer input{
+    padding-right: 30px;
+}
+#optionContainer *{
+    color:var(--blue);
+    cursor: pointer;
+}
+#optionContainer *:is(:hover ,:focus ,:active){
+    text-decoration: underline;
+}
+#homePage{
+    display: flex;
+}
+#navSection{
+    width: 20%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white4);
+}
+#navSection *{
+    width: 100%;
+}
+#navSection>nav{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    flex-grow: 1;
+    border-bottom: 2px solid var(--white5);
+}
+#navSection>nav>a{
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: all .1s ease-in-out;
+    font-size: var(--fontSize-M);
+}
+#navSection>nav::-webkit-scrollbar-track ,#navSection>nav>a:is(:hover ,:focus ,:active){
+    background-color: var(--white5);
+}
+#navSection>nav>a:is(.active){
+    border-bottom-color: var(--orange);
+    font-weight: bold;
+}
+#navFunctions>button{
+    padding: 10px;
+    transition: all .1s ease-in-out;
+    font-size: var(--fontSize-M);
+    cursor: pointer;
+    border: none;
+    background-color: var(--white4);
+}
+#navFunctions>button:is(:hover ,:focus ,:active){
+    background-color: var(--white5);
+    color: hsl(0, 100%, 50%);
+}
+#navSectionTopContent{
+    display: grid;
+    place-items: center;
+}
+#navSectionTopContent>p{
+    width: fit-content;
+}
+#navSectionTopContent , #mainSectionTopContent{
+    height: 10vh;
+}
+#mainSection{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+#mainSection>*{
+    width: 100%;
+    padding: 10px;
+}
+#mainSectionTopContent{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+#subDirContent{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 30px;
+}
+#preFormInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#preFormInfo >h1{
+    font-size: var(--fontSize-B);
+}
+#preFormInfo >p{
+    font-size: var(--fontSize-M);
+}
+#getContentForm{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#getContentForm>div>p{
+    font-size: var(--fontSize-S);
+}
+#tableSection{
+    position: relative;
+}
+#tableSection input{
+    padding-right: 20px;
+}
+#tableSection>svg{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: var(--fontSize-B);
+    cursor: pointer;
+    fill: red;
+}
+#columnSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#columnInputContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.columnInputBox{
+    width: 33.33%;
+    display: flex;
+    gap:20px;
+}
+.columnInputBox input{
+    width: 20px;
+    cursor: pointer;
+}
+.conditionBox{
+    display: flex;
+}
+#conditionSection , #conditionContainersContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.conditionBox>input{
+    text-align: center;
+}
+#newDataSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#newDataContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.newDataBox{
+    display: flex;
+    align-items: center;
+}
+.addFieldBtn{
+    margin: auto;
+    cursor: pointer;
+    font-size: var(--fontSize-B);
+    transition: all .3s ease-in-out;
+}
+.addFieldBtn:is(:hover ,:focus ,:active){
+    fill: green;
+    transform: rotate(90deg);
+}
+#lastRequestDataContainer{
+    width: 100%;
+    overflow-x: scroll;
+}
+#lastRequestDataContainer::-webkit-scrollbar{
+    height: 5px;
+}
+#lastRequestDataTable{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 5px;
+}
+#lastRequestDataTable *{
+    text-align: center;
+    white-space: nowrap;
+    padding: 7px;
+    border-bottom: 1px solid var(--orange);
+}
+#calendar{
+    display: flex;
+    overflow: hidden;
+}
+#calendar *{
+    font-size: var(--fontSize-M);
+}
+#calendar>#content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#currTimeSlider{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: var(--orange);
+    z-index: 9999;
+}
+#currTimeSlider>p{
+    position: absolute;
+    background-color: var(--white3);
+    z-index: 1;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#time{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#time>p{
+    text-align: end;
+    position: absolute;
+    width: 0;
+    display: flex;
+    justify-content: center;
+}
+#calendar>#content>.day{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.day>.class{
+    position: absolute;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    background-color: var(--blue);
+    border-left: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
+}
